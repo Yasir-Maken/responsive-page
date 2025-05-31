@@ -8,33 +8,35 @@
     <script type="text/javascript" src="app.js" defer></script>
 </head>
 <body>
+    <!-- the navigation bar -->
     <nav id="sidebar">
         <ul>
+            <!-- the collapse button & slogan -->
             <li>
-                <span class="logo">Zool IT</span>
-                <button onclick=toggleSidebar() id="toggle-btn">
+                <span class="logo">Zool IT</span>   <!-- slogan -->
+                <button onclick=toggleSidebar() id="toggle-btn"> <!--button double arrow for collapse-->
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
                 </button>
             </li>
-            <li class="active">
+            <li class="active"> <!--the home menu icon -->
                 <a href="index.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
                     <span>Home</span>
                 </a>
             </li>
-            <li>
+            <li> <!--dashboard menu icon-->
                 <a href="dashboard.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li>
+            <li> <!--dropdown menu button to create something -->
                 <button onclick=toggleSubMenu(this) class="dropdown-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M560-320h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
                     <span>Create</span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </button>
-                <ul class="sub-menu">
+                <ul class="sub-menu"> <!--the sub menu buttons for create something-->
                     <div>
                         <li><a href="#">Folder</a></li>
                         <li><a href="#">Document</a></li>
@@ -42,13 +44,13 @@
                     </div>
                 </ul>
             </li>
-            <li>
-                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+            <li> <!-- dropdown menu buttons for to do lists-->
+                <button onclick=toggleSubMenu(this) class="dropdown-btn"> 
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"/></svg>
                     <span>ToDo-List</span>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
                 </button>
-                <ul class="sub-menu">
+                <ul class="sub-menu"> <!-- the sub menu buttons to to do lists-->
                     <div>
                         <li><a href="#">Work</a></li>
                         <li><a href="#">Private</a></li>
@@ -59,37 +61,38 @@
                 </ul>
             </li>
             <li>
-                <a href="calender.html">
+                <a href="calender.html"> <!-- calender menu button & icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
                     <span>Calender</span>
                 </a>
             </li>
             <li>
-                <a href="profile.html">
+                <a href="profile.html"> <!-- profile menu button & icon-->
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M400-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM80-160v-112q0-33 17-62t47-44q51-26 115-44t141-18h14q6 0 12 2-8 18-13.5 37.5T404-360h-4q-71 0-127.5 18T180-306q-9 5-14.5 14t-5.5 20v32h252q6 21 16 41.5t22 38.5H80Zm560 40-12-60q-12-5-22.5-10.5T584-204l-58 18-40-68 46-40q-2-14-2-26t2-26l-46-40 40-68 58 18q11-8 21.5-13.5T628-460l12-60h80l12 60q12 5 22.5 11t21.5 15l58-20 40 70-46 40q2 12 2 25t-2 25l46 40-40 68-58-18q-11 8-21.5 13.5T732-180l-12 60h-80Zm40-120q33 0 56.5-23.5T760-320q0-33-23.5-56.5T680-400q-33 0-56.5 23.5T600-320q0 33 23.5 56.5T680-240ZM400-560q33 0 56.5-23.5T480-640q0-33-23.5-56.5T400-720q-33 0-56.5 23.5T320-640q0 33 23.5 56.5T400-560Zm0-80Zm12 400Z"/></svg>
                     <span>Profile</span>
                 </a>
             </li>
         </ul>
     </nav>
-    <main>
-        <div class="header">
+    <!--******************************** Main Page Content *****************************************-->
+    <main> 
+        <div class="header"> <!-- the header the main content loge and slogan-->
             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>ITVx</title><path d="M15.91 11.018a59.87 59.87 0 0 0-.98-.27c-.1 0-.16.05-.2.17-.35 1.2-.9 2.53-1.38 3.36-.16-.3-.45-.83-.73-1.3l-1.04-1.83c-.22-.34-.36-.43-.64-.43-.57 0-1.42.51-1.42 1 0 .16.04.28.21.57.2.32.3.6.3.92 0 .82-.62 1.56-1.8 1.56-.55 0-.99-.16-1.27-.45-.27-.28-.4-.65-.4-1.27v-1.03c.2.08.44.12.73.12h.93c.13 0 .17-.05.17-.16v-1c0-.11-.04-.17-.17-.17H6.56v-1.63c0-.2-.05-.33-.16-.43-.16-.15-.5-.22-.89-.22-.4 0-.72.07-.89.22-.1.1-.16.24-.16.43v4c0 .66-.1 1.02-.34 1.27-.2.22-.53.34-.88.34s-.66-.12-.84-.31c-.2-.2-.29-.48-.29-.9v-2.6c0-.11-.04-.16-.16-.16H.18c-.12 0-.17.05-.17.16v2.35c0 .94.25 1.47.67 1.9.55.54 1.48.79 2.38.79.88 0 1.81-.32 2.36-.82a4 4 0 0 0 2.6.82c1.42 0 2.47-.6 3.08-1.6.27.43.47.74.67 1.02.28.42.54.58 1.12.58.54 0 .87-.13 1.17-.59.78-1.18 1.44-2.59 1.92-3.88.05-.16.1-.28.1-.35 0-.08-.05-.14-.17-.18zm-14.85-.92c.66 0 1.07-.46 1.07-1.05 0-.6-.4-1.06-1.07-1.06-.65-.01-1.06.46-1.06 1.05 0 .59.4 1.05 1.06 1.05zm22.84 5.1-2.28-3.13c-.05-.07-.05-.14 0-.2l2.1-3.07c.07-.09.11-.15.11-.28 0-.12-.07-.25-.19-.37a.51.51 0 0 0-.39-.17.4.4 0 0 0-.24.1l-2.9 2.22c-.06.05-.13.05-.2 0l-2.89-2.22a.4.4 0 0 0-.25-.1.51.51 0 0 0-.38.17c-.12.12-.2.25-.2.37 0 .13.05.2.11.28l2.11 3.07c.05.06.05.13 0 .2l-2.28 3.13a.42.42 0 0 0-.1.26c0 .14.06.26.18.38.11.11.24.18.38.18.1 0 .17-.04.26-.1l3.06-2.23a.17.17 0 0 1 .2 0l3.07 2.23c.09.06.16.1.26.1.14 0 .27-.07.38-.18.12-.12.18-.24.18-.38 0-.1-.04-.17-.1-.26z"/></svg>
             <h1>Yasir Maken</h1>
         </div>
-        <div class="container">
+        <div class="container"> <!-- first paragraph in the content-->
             <h2>Hello World</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere veniam explicabo id provident beatae doloremque minima iste fuga quos? Quod molestiae corrupti numquam perspiciatis quisquam, sed omnis. At velit distinctio necessitatibus modi quisquam animi cum repellat blanditiis eos rem, ea, nihil, sint consequatur laudantium quae saepe eius amet doloribus. Ullam atque id quae libero, eligendi beatae, natus voluptatum consequuntur aspernatur ratione cum cupiditate quia ipsam nam velit quisquam voluptate aperiam molestiae in. Enim praesentium repellendus unde voluptatibus dolorum velit.</p>
         </div>
-        <div class="container">
+        <div class="container"> <!-- second paragraph in the content-->
             <h2>Welcome Beautiful</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, est? Quibusdam, odit. Mollitia inventore sequi ut harum repellat, non architecto voluptate atque ullam suscipit pariatur dolore, amet obcaecati modi quasi consequatur repellendus illo maiores quibusdam, soluta odit reiciendis laudantium. Animi, quaerat magni ratione consequuntur ipsum eum hic autem maiores corrupti perspiciatis accusamus est neque esse ipsa, distinctio quasi blanditiis totam nostrum quos vitae tenetur vero! Est doloremque incidunt dicta amet tempore labore. Ducimus dicta cupiditate ex iste nisi nesciunt aut.</p>
         </div>
-        <div class="container">
+        <div class="container"> <!-- third paragraph in the content-->
             <h2>Enjoyable Lorem</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas quis veniam beatae vel maiores exercitationem rem quibusdam provident, assumenda reiciendis quos earum cumque ullam obcaecati quas iure fuga dolores repellendus. Cupiditate eius repellat iure? Nam est, libero eveniet aperiam ex sit maxime fuga cum corrupti. Quas atque quaerat nostrum, magni saepe enim alias, optio eveniet rerum recusandae, porro officia corporis excepturi provident! Sapiente minus perferendis doloribus quo error illo est ut vero, explicabo necessitatibus soluta veritatis adipisci sit harum exercitationem, fuga cupiditate obcaecati nobis autem natus delectus aspernatur? Dolorem, pariatur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam distinctio ad aperiam illum eaque assumenda tempora beatae animi, voluptate, provident suscipit reiciendis vitae ab laboriosam ipsam dolorem expedita fugit delectus alias iusto rerum iste quis quasi pariatur. Ducimus voluptates, doloremque obcaecati temporibus ab vitae asperiores totam exercitationem corrupti est. Facilis sunt dolorum aspernatur consequatur, consequuntur reiciendis nihil harum provident, in atque, quod quo ab quisquam debitis placeat itaque accusantium! Cupiditate natus quod quo quas odio architecto eius nemo, perspiciatis fugiat dolores fugit hic porro incidunt voluptate quam consequatur ipsa officia corrupti nulla. Doloremque excepturi libero architecto harum assumenda dignissimos nulla?</p>
         </div>
-        <div class="container">
+        <div class="container"> <!-- fourth paragraph in the content-->
             <h2>More Lorem</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dicta tempora nemo quo soluta rem voluptates illum, aliquam nobis autem vero expedita, facilis facere totam labore inventore excepturi odio voluptatum vel consequuntur amet molestias possimus incidunt. Repellat tenetur fugiat facilis pariatur nobis voluptas porro, deleniti voluptatem eos non qui minus impedit maiores quae fuga veniam repellendus corrupti delectus magnam voluptatum odio quidem eveniet quas! Odio, optio consequuntur a ipsa delectus aut alias quia quod ad. Doloribus provident adipisci similique et quod at alias officia odit necessitatibus, natus eum cumque cupiditate vitae laudantium nisi maiores id, doloremque omnis? Aliquid magni aspernatur illum. Odit accusamus possimus dicta reiciendis, recusandae suscipit magnam, expedita et tenetur fugiat similique facilis consectetur pariatur quas soluta voluptatibus omnis, accusantium at? Perspiciatis officiis odio quae quidem assumenda velit odit praesentium quia quam totam maxime maiores nisi non eligendi explicabo ipsum, unde voluptatum corrupti ratione! Fugiat distinctio soluta sapiente velit optio culpa aspernatur rem totam atque cumque deserunt, labore consequuntur mollitia autem voluptatem qui ea ipsa, nihil repudiandae consectetur quam. Aut, nulla! Doloribus vel distinctio deserunt provident debitis nemo, adipisci ut assumenda, enim, deleniti officia iusto neque dolorem tenetur porro incidunt autem sit! Quidem libero dignissimos nobis adipisci quos!</p>
         </div>
