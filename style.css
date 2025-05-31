@@ -34,6 +34,17 @@ html {
     position: sticky;
     top: 0;
     align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+
+    text-wrap: nowrap;
+
+}
+
+/* when sidebar collapsed */
+#sidebar.close {
+    padding: 5px;
+    width: 60px;
 }
 
 /*set sidebar li to none to show normally*/
@@ -78,11 +89,36 @@ html {
     background-color: var(--hover-clr);
 }
 
+/*rotate arrow along side the dropdown button*/ .dropdown-btn svg {transition: 200ms ease;}
+.rotate svg:last-child {
+    rotate: -180deg;
+}
+
+/* then want to make the side menu collapsable, first the toggle button*/
+#toggle-btn {
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
+
+    svg {
+        transition: rotate 150ms ease;
+    }
+}
+
+/*toggle button on hover*/
+#toggle-btn:hover {
+    background-color: var(--hover-clr);
+}
+
 /*manuplate submenu*/
 #sidebar .sub-menu {
     display: grid;
     grid-template-rows: 0fr;
     transition: 300ms ease-in-out;
+    padding-left: 2em;
 
     > div {
         overflow: hidden;
